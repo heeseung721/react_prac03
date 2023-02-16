@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
+import styles from "./TodoList.module.css";
 
 const TodoList = ({ filter }) => {
   //todo 목록의 상태를 관리
@@ -26,8 +27,8 @@ const TodoList = ({ filter }) => {
   const filtered = getFilteredItem(todos, filter);
 
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filtered.map((item) => (
           <Todo
             key={item.id}
