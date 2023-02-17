@@ -11,10 +11,11 @@ const Header = ({ filters, filter, onFilterChange }) => {
   return (
     <>
       <header className={styles.header}>
-        <button onClick={toggleDarkMode}>
+        <button onClick={toggleDarkMode} className={styles.toggle}>
           {!darkMode && <HiMoon />}
           {darkMode && <HiSun />}
         </button>
+
         <ul className={styles.filters}>
           {filters.map((value, index) => (
             <li key={index}>
